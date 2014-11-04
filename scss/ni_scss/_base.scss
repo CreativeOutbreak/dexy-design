@@ -1,0 +1,35 @@
+#ni {
+    
+   @include mod_rem("min-width", 320); 
+   background-color: #f2f3f4; 
+    // Patternlab - start
+    .sg-pattern-body {
+        text-align: left;
+    }
+    // Patternlab - end
+
+    picture {
+        font-size: 0;
+        line-height: 0;
+    } 
+
+    
+
+    
+
+    [role="main"] > {
+        * {
+            text-align: left;
+            margin-left: px_rem(5);
+            margin-right: px_rem(5);
+        }
+
+        ul, dl  {
+            margin-left: px_rem(12);
+        }
+
+        ol {
+            margin-left: px_rem(16);
+        }
+    }
+}

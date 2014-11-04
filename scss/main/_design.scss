@@ -1,0 +1,94 @@
+/* New Internationalist main design */
+
+html, body {
+    height: 100%;
+    background-color: $bg-color;
+}
+
+/** Main contect section layout **/
+.main {
+    background-color: #fff;
+    margin: auto;
+    @include mod_rem("padding-top", 45);
+    @include mod_rem("max-width", $max-width);
+    @include mod_rem("padding-left", 12);
+    @include mod_rem("padding-right", 12);
+
+    min-height: 100%;
+    height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: -(($footer-height * 2) + $header-height);
+}
+
+
+@include mq($from: tablet) {
+    .main {
+        margin-bottom: -($footer-height + $header-height);
+    }
+}
+
+/** Main footer layout **/
+
+footer, .push {
+    height: (($footer-height * 2) + $header-height); /* .push must be the same height as .footer */
+}
+
+footer {
+    background-color: #333;
+    //@include mod_rem("padding", 20);
+    //border-top: solid 20px #333; 
+    background-image: linear-gradient(to top, rgba(51,51,51,0) 0%,rgba(51,51,51,1) 100%), url(../img/patterns/6b.png);
+    @include vendor('box-shadow', 0 1.5em 1em -1em rgba(0, 0, 0, 0.4) inset);
+    .inner {
+        max-width: $max-width;
+        margin: auto;
+        @include mod_rem("height", (($footer-height * 2) - 5px));
+        @include mod_rem("padding-top", 10);
+        background: linear-gradient(to bottom, rgba(34, 34, 34, 0) 0%, #222 100%) repeat scroll 0% 0% transparent;
+        ul {
+            //width: 100%;
+            @include vendor('column-count', 4);
+            li {
+                list-style: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: #ddd;
+                &:hover {
+                    color: #fff;
+                    border-bottom: 1px dotted #fff;
+                }
+            }
+        }
+
+    }
+
+    .copy {
+        display: block;
+        @include mod_rem("height", 50);
+        background-color: #000;
+        text-align: center;
+        color: #ddd;
+        clear: both;
+        a {
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+
+}
+
+
+@include mq($from: tablet) {
+    footer, .push {
+        height: $footer-height + $header-height; /* .push must be the same height as .footer */
+    }
+
+    footer {
+        .inner {
+            @include mod_rem("height", 205);
+        }
+    }
+}

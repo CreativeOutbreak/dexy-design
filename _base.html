@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block head -%}
+{% include 'macros/_head.html' -%}
+{% endblock %}
+<body>
+    {% block menu -%}
+    {% include 'macros/_menu.html' -%}
+    {% endblock -%}
+    {% block page -%}
+    <div id="page">
+    {{ content }}
+    </div>
+    {% endblock %}
+    {% block footer -%}
+    {% include 'macros/_footer.html' %}
+    {%- endblock %}
+</body>
+</html>

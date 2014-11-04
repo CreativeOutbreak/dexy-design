@@ -1,0 +1,32 @@
+#ni {
+    
+    .fib-image { 
+    
+        .fib-pic, .fib-box {
+            float: left;
+        }
+
+        .fib-pic {
+            width: 60%    
+        }
+
+        .fib-box {
+            width: 40%;
+        }
+
+        .medium-pic {
+            width: 100%;
+            &:after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            
+        }
+
+        .small-pic {
+            width: 50%;
+            float: right;
+        }
+    }
+}
