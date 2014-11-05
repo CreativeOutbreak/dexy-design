@@ -1,7 +1,10 @@
 {% extends '_base.html' -%}
 
 {% block page -%}
-<section class="main" role="main">
+<section class="main container" role="main">
+    {% block featured -%}
+      {% include 'macros/_featured.html' -%}
+    {% endblock -%}
     {{ content }}
     <div class="push"></div>
 </section>

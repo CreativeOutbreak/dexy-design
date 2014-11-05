@@ -24,7 +24,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 4;
-
+    min-width: 320px;
     
     a {
         h1, h2 {
@@ -257,7 +257,7 @@ body {
 
 }
 
-.close-btn {
+a.close-btn {
     color: #ffffff;
     float: right;
     font-size: pem(24);
