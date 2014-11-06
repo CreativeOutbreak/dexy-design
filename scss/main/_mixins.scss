@@ -52,3 +52,12 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
+
+
+/** Mixins for including inside media tags, as @extend doesn't work inside media tags */
+@mixin ellipsis() {
+    white-space: nowrap;
+    width: 100%;                   
+    overflow: hidden;              /* "overflow" value must be different from "visible" */ 
+    text-overflow: ellipsis;
+}
