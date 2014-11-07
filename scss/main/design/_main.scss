@@ -1,0 +1,21 @@
+.main {
+    background-color: #fff;
+    margin: auto;
+    @include mod_rem("padding-top", 45);
+    @include mod_rem("max-width", $max-width);
+    @include mod_rem("padding-left", 12);
+    @include mod_rem("padding-right", 12);
+
+    min-height: 100%;
+    height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: -(($footer-height * 2) + $header-height + 40px);
+}
+
+
+@include mq($from: tablet) {
+    .main {
+        margin-bottom: -($footer-height + $header-height);
+    }
+}

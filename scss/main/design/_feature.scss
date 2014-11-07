@@ -1,0 +1,147 @@
+/** Main feature box **/
+
+.feature-box, .feature-row {
+    background-color: #eee;
+    @include mod_rem("margin-top", 10);
+    border-top: 1px solid $brand-primary;
+    section {
+        height: auto;
+    }
+    h1 {
+        @include mod_rem("font-size", 20);
+        @include mod_rem("margin-top", 5);
+        @include mod_rem("margin-bottom", 7);
+        line-height: 1.25;
+    }
+    p {
+        margin: 0;
+        width: 100%;                   
+        overflow: hidden;
+        position: relative;
+
+    }
+
+
+    img {
+        @include mod_rem("margin-top", 5);
+    }
+
+    .article {
+        @include mod_rem("padding-right", 7);
+        @include mod_rem("padding-bottom", 2);
+        border-bottom: 1px solid #ccc;
+        display: block;
+        clear: both;
+        @include flexbox();
+        .info {
+         @include order(2);
+         @include flex(0 1 135%);
+        }
+        h1, p {
+            //width: 55%;
+            @include mod_rem("padding-left", 5);
+            @extend .ellipsis;
+            display: block;
+            float: right;
+        }
+        img {
+            //width: 45%;
+            @include order(1);
+            margin: auto;
+            @include mod_rem("padding-left", 7);
+            @include mod_rem("margin-top", 7); 
+        }
+    }
+
+    .article-list {
+        clear: both;
+        h1, p {
+            @include mod_rem("padding-right", 5);
+            @include mod_rem("padding-left", 7);
+            @extend .ellipsis;
+        }
+
+        h1 {
+            color: $brand-primary;
+        }
+        p {
+            @include mod_rem("padding-bottom", 10);
+            @include mod_rem("margin-bottom", 10);
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}
+
+.main-feature {
+    @include flexbox();
+    @include flex-flow(column-reverse);
+    @include mod_rem("margin-bottom", 7);
+    @include mod_rem("padding-bottom", 7);
+    border-bottom: 1px solid #ddd;
+    .img {
+        border-right: 1px solid #ddd;
+        text-align: center;
+        align-self: stretch;
+        img {
+          width: 98%;
+        }
+    }
+    .info {
+        @include mod_rem("padding-left", 7);
+
+    }
+}
+
+@include mq($from: tablet) {
+    .feature-box, .feature-row {
+        .article {
+            clear: none;
+            -webkit-flex-flow: column;
+            flex-flow: column;
+            border-bottom: none;
+            h1, p, img {
+                width: 100%;
+                clear: both;
+                white-space: normal;
+            }
+        }
+        .article-list {
+            clear: none;
+            p {
+              border-color: #ddd;
+              &:last-child {
+                border-bottom: none;
+              }
+            }
+        }
+    }
+
+    .main-feature {
+      @include flex-flow(row);
+      @include align-content(stretch);
+      border: none;
+      .info {
+         @include flex(1 1 40%);
+         @include mod_rem("padding-right", 7);
+      }
+
+      .img {
+        @include mod_rem("padding-right", 7);
+        }
+    }
+
+    .feature-box {
+        h1 {
+            line-height: 1.25;
+        }
+        p {
+            @include mod_rem("max-height", 90);
+        }
+        .article {
+            h1 {
+                @include ellipsis();
+                color: $brand-primary;
+            }
+        }
+    }
+}

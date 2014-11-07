@@ -1,63 +1,98 @@
 @mixin ni_visibility($parent) {
-    #{$parent} {
-        display: block !important;
-        visibility: visible;
-    }
-    table#{$parent}  { display: table; }
-    tr#{$parent}     { display: table-row !important; }
-    th#{$parent},
-    td#{$parent}     { display: table-cell !important; }
+  #{$parent} {
+    display: block !important;
+    visibility: visible;
+  }
+  table#{$parent}  { display: table; }
+  tr#{$parent}     { display: table-row !important; }
+  th#{$parent},
+  td#{$parent}     { display: table-cell !important; }
 }
 
 // [converter] $parent hack
 @mixin ni_invisibility($parent) {
-    #{$parent} {
-        display: none !important;
-        visibility: hidden;
-    }
+  #{$parent} {
+    display: none !important;
+    visibility: hidden;
+  }
 }
 @mixin mod_rem($mod, $px) {
-    #{$mod} : strip-units($px) * 1px;
-    #{$mod} : px_rem($px);
+  #{$mod} : strip-units($px) * 1px;
+  #{$mod} : px_rem($px);
 }
 
 @mixin width_rem($px) {
-    @include mod_rem("width", $px);
+  @include mod_rem("width", $px);
 }
 
 @mixin height_rem($px) {
-    @include mod_rem("height", $px);
+  @include mod_rem("height", $px);
 }
 
 @mixin min_width_rem($px) {
-    @include mod_rem("min-width", $px);
+  @include mod_rem("min-width", $px);
 }
 
 @mixin min_height_rem($px) {
-    @include mod_rem("min-height", $px);
+  @include mod_rem("min-height", $px);
 }
 
 @mixin max_width_rem($px) {
-    @include mod_rem("max-width", $px);
+  @include mod_rem("max-width", $px);
 }
 
 @mixin max_height_rem($px) {
-    @include mod_rem("max-height", $px);
+  @include mod_rem("max-height", $px);
 }
 
 
 
 @mixin line_clamp() {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
+/**  flex-box mixins **/
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin align-content($value) {
+  -webkit-align-content: $value;
+  align-content: $value;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin flex-flow($values) {
+  -webkit-flex-flow: $values; 
+  flex-flow: $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
 
 /** Mixins for including inside media tags, as @extend doesn't work inside media tags */
 @mixin ellipsis() {
-    white-space: nowrap;
-    width: 100%;                   
-    overflow: hidden;              /* "overflow" value must be different from "visible" */ 
-    text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;                   
+  overflow: hidden;              /* "overflow" value must be different from "visible" */ 
+  text-overflow: ellipsis;
 }

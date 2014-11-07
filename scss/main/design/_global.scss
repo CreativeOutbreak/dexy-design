@@ -1,0 +1,15 @@
+html, body {
+    height: 100%;
+    background-color: $bg-color;
+    min-width: 320px;
+}
+
+/** Global Classes **/
+.ellipsis {
+    white-space: nowrap;
+    width: 100%;                   
+    overflow: hidden;              /* "overflow" value must be different from "visible" */ 
+    text-overflow: ellipsis;
+}
+
+

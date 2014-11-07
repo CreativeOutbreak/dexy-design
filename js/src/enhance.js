@@ -3,7 +3,7 @@ window.addEvent('domready', function() {
   var close_buttons = $$('.close-btn');
   var sc = 'selected';
   menu_buttons.addEvent('click', function(e) {
-    history.go(-1);
+    //history.go(-1);
     if(this.hasClass(sc)) {
       e.stop();
       closeMenu();
@@ -19,7 +19,7 @@ window.addEvent('domready', function() {
   });
 
   function closeMenu() {
-    history.go(-1);
+    //history.go(-1);
     menu_buttons.removeClass(sc);
     window.location = "#nav-open-btn";
   }
