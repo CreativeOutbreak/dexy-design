@@ -49,7 +49,7 @@ footer {
 }
 
 
-@include mq($from: fablet) {
+@include mq($from: phablet) {
     footer {
         .copy {
             @include mod_rem("padding-top", 10);

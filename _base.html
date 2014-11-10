@@ -8,9 +8,10 @@
     {% include 'macros/_menu.html' -%}
     {% endblock -%}
     {% block page -%}
-    <div id="page">
+    <section class="main container" role="main">
     {{ content }}
-    </div>
+    <div class="push"></div>
+    </section>
     {% endblock %}
     {% block footer -%}
     {% include 'macros/_footer.html' %}

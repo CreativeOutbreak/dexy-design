@@ -1,0 +1,41 @@
+.entry-list {
+    li {
+        background-color: #eee;
+        @include mod_rem("padding", 10);
+        @include mod_rem("margin-bottom", 10);
+        border-top: 1px solid $brand-primary;
+
+        img {
+            width: 100%;
+        }
+
+        h3, p {
+            @include mod_rem("margin-top", 2);
+            @include mod_rem("margin-bottom", 2);
+        }
+    }
+}
+
+@include mq($from: phablet) {
+    .entry-list {
+        li {
+            img {
+                width: 40%;
+            }
+            .content {
+                width: 55%;
+                float: right;
+            }
+        }
+        
+        li:first-child {
+            img {
+                width: 100%;
+            }
+            .content {
+                width: 100%;
+                float: none;
+            }
+        }
+    }
+}

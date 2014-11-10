@@ -43,7 +43,7 @@ module.exports = function(grunt) {
                 }
            },
            dexy: {
-               files: ['css/*.css', 'css/**/*.css', '**/*.html', '*.html', '*.markdown', '*.md', 'js/*.js'],
+               files: ['css/*.css', 'css/**/*.css', '**/*.html', '*.html', '**/*.markdown', '*.markdown', '*.md', 'js/*.js', '**/*.jinja', '*.jinja'],
                tasks: ['shell:dexy']
            }
 

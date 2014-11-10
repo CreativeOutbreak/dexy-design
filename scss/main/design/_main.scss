@@ -5,6 +5,7 @@
     @include mod_rem("max-width", $max-width);
     @include mod_rem("padding-left", 12);
     @include mod_rem("padding-right", 12);
+    @include mod_rem("padding-bottom", 12);
 
     min-height: 100%;
     height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
