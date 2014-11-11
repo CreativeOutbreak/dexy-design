@@ -8,6 +8,31 @@
     @return $px / $base-font-size * 1rem;
 }
 
+@function px_rems($px) {
+    $rems: ();
+    @each $p in $px {
+        $p: strip-units($p) * 1px;
+        @if $p == 0px {
+            $p: 0;
+        }
+        @else {
+            $p: $p / $base-font-size * 1rem;
+        }
+        $rems: join($rems, $p, space);
+    }
+    @return $rems;
+}
+
 @function strip-units($number) {
   @return $number / ($number * 0 + 1);
 }
+
+@function units-px($num) {
+    $px: ();
+    @each $p in $num {
+        $p: strip-units($p) * 1px;
+        $px: join($px, $p, space);
+    }
+    @return $px;
+}
+

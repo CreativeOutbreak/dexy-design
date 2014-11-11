@@ -17,8 +17,13 @@
   }
 }
 @mixin mod_rem($mod, $px) {
-  #{$mod} : strip-units($px) * 1px;
-  #{$mod} : px_rem($px);
+  #{$mod} : units-px($px);
+  #{$mod} : px_rems($px);
+}
+
+@mixin mod_color($mod, $c, $a) {
+  #{$mod} : lighten($c, ($a * 100%));
+  #{$mod} : rgba($c, $a);
 }
 
 @mixin width_rem($px) {
