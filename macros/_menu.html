@@ -1,3 +1,4 @@
+<div style="width:100%; height: 200px;"></div>
 <header id="header" class="header" role="banner">
     <div class="container">
         <a class="hgroup" href="#">
@@ -7,7 +8,7 @@
         <a class="menu-button" id="nav-open-btn"  href="#nav-holder"><span class="screen-reader">Menu</span> <i class="fa fa-bars"></i></a> 
         <a class="menu-button" id="login-open-btn"  href="#login-holder"><span>Login</span> <i class="fa fa-user"></i></a> 
         <a class="menu-button" id="search-open-btn"  href="#search-holder"><span>Search</span> <i class="fa fa-search"></i></a>
-        <a href="#">Subscribe</a>
+        <a class="subs-button" href="#">Subscribe</a>
     </div>
 </header>
 
@@ -18,15 +19,33 @@
         <h2>Menu</h2>
         <nav class="global-nav" id="main-nav" role="navigation"> 
             <ul>
-                <li><a href="#">Magazine</a></li>
+                <li>
+                <label for="magazine">Magazine <i class="fa fa-sort-desc"></i></label>
+                <input type="checkbox" id="magazine" />
+                <ul>
+                    <li><a href="#">Table of Content</a></li>
+                    <li><a href="#">The Big Story</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Mixed media</a></li>
+                    <li><a href="#">Opinion</a></li>
+                    <li><a href="#">Regulars</a></li>
+                    <li><a href="#">Past Issues</a></li>
+                </ul>
+                </li>
                 <li><a href="#">Articles</a></li>
                 <li>
                 <label for="subjects">Subjects <i class="fa fa-sort-desc"></i></label>
                 <input type="checkbox" id="subjects" />
                 <ul>
-                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Culture</a></li>
                     <li><a href="#">Enviroment</a></li>
+                    <li><a href="#">Health</a></li>
                     <li><a href="#">Humen Rights</a></li>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">Science & Technology</a></li>
+                    <li><a href="#">Society</a></li>
+                    <li><a href="#">War & Peace</a></li>
                 </ul>
                 </li>
                 <li><a href="#">Books</a></li>
