@@ -11,12 +11,17 @@
 @function px_rems($px) {
     $rems: ();
     @each $p in $px {
-        $p: strip-units($p) * 1px;
-        @if $p == 0px {
-            $p: 0;
+        @if type-of($p) == "number" {
+            $p: strip-units($p) * 1px;
+            @if $p == 0px {
+                $p: 0;
+            }
+            @else {
+                $p: $p / $base-font-size * 1rem;
+            }
         }
         @else {
-            $p: $p / $base-font-size * 1rem;
+            @debug "not a number!";
         }
         $rems: join($rems, $p, space);
     }
@@ -30,7 +35,9 @@
 @function units-px($num) {
     $px: ();
     @each $p in $num {
-        $p: strip-units($p) * 1px;
+        @if type-of($p) == "number" {
+            $p: strip-units($p) * 1px;
+        }
         $px: join($px, $p, space);
     }
     @return $px;

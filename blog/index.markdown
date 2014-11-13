@@ -3,7 +3,7 @@
   <div class="column-16">
   <ul class="entry-list">
 {% for article in v.articles %}
-{% include '/includes/articlelist-item.html' %}
+{% include '/includes/_entrylist-item.html' %}
 {% endfor %}
 </ul>
   </div>

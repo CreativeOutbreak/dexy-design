@@ -26,29 +26,6 @@
   #{$mod} : rgba($c, $a);
 }
 
-@mixin width_rem($px) {
-  @include mod_rem("width", $px);
-}
-
-@mixin height_rem($px) {
-  @include mod_rem("height", $px);
-}
-
-@mixin min_width_rem($px) {
-  @include mod_rem("min-width", $px);
-}
-
-@mixin min_height_rem($px) {
-  @include mod_rem("min-height", $px);
-}
-
-@mixin max_width_rem($px) {
-  @include mod_rem("max-width", $px);
-}
-
-@mixin max_height_rem($px) {
-  @include mod_rem("max-height", $px);
-}
 
 
 

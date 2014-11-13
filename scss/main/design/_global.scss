@@ -16,3 +16,8 @@ html, body {
     list-style: none;
     padding: 0;
 }
+
+.fixed-top {
+    position: fixed !important;
+    top: 0;
+}
