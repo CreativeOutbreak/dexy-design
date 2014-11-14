@@ -26,55 +26,61 @@
   #{$mod} : rgba($c, $a);
 }
 
-
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
 
 
 @mixin line_clamp() {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 /**  flex-box mixins **/
 
 @mixin flexbox() {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 }
 
 @mixin align-content($value) {
-  -webkit-align-content: $value;
-  align-content: $value;
+    -webkit-align-content: $value;
+    align-content: $value;
 }
 
 @mixin flex($values) {
-  -webkit-box-flex: $values;
-  -moz-box-flex:  $values;
-  -webkit-flex:  $values;
-  -ms-flex:  $values;
-  flex:  $values;
+    -webkit-box-flex: $values;
+    -moz-box-flex:  $values;
+    -webkit-flex:  $values;
+    -ms-flex:  $values;
+    flex:  $values;
 }
 
 @mixin flex-flow($values) {
-  -webkit-flex-flow: $values; 
-  flex-flow: $values;
+    -webkit-flex-flow: $values; 
+    flex-flow: $values;
 }
 
 @mixin order($val) {
-  -webkit-box-ordinal-group: $val;  
-  -moz-box-ordinal-group: $val;     
-  -ms-flex-order: $val;     
-  -webkit-order: $val;  
-  order: $val;
+    -webkit-box-ordinal-group: $val;  
+    -moz-box-ordinal-group: $val;     
+    -ms-flex-order: $val;     
+    -webkit-order: $val;  
+    order: $val;
 }
 
 /** Mixins for including inside media tags, as @extend doesn't work inside media tags */
 @mixin ellipsis() {
-  white-space: nowrap;
-  width: 100%;                   
-  overflow: hidden;              /* "overflow" value must be different from "visible" */ 
-  text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;                   
+    overflow: hidden;              /* "overflow" value must be different from "visible" */ 
+    text-overflow: ellipsis;
 }

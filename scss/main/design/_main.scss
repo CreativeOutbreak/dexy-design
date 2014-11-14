@@ -18,5 +18,6 @@
 @include mq($from: tablet) {
     .main {
         margin-bottom: -($footer-height + $header-height);
+        @include mod_rem("padding-top", 1);
     }
 }

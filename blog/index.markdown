@@ -3,11 +3,11 @@
   <div class="column-16">
   <ul class="entry-list">
 {% for article in v.articles %}
-{% include '/includes/_entrylist-item.html' %}
+{% include '/includes/entrylist-item.html' %}
 {% endfor %}
 </ul>
   </div>
-  <div class="column-8">
-## side bar
+  <div class="column-8 sidebar">
+{% include '/includes/doubleclick-advert.html' %}
   </div>
 </div>

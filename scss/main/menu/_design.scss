@@ -35,8 +35,31 @@ body {
         display: inline-block;
         background-repeat: no-repeat;
     }
+
+    .leaderboard-ad {
+        display: none;
+    }
 }
 
+
+.logo-banner, .banner {
+    a.hgroup {
+        @include mod_rem("width", 45);
+        //width: pem(45);
+        @include mod_rem("height", 45);
+        //height: pem(45);
+        @include mod_rem("background-position", -217 -92);
+        //background-position: pem(-217) pem(-92);
+        border-right: 1px solid rgba(0,0,0,0.2);
+        background-image: url("../../img/logo-large-sprite.png");
+        display: inline-block;
+        background-repeat: no-repeat;
+
+        h1, h2 {
+            @extend .screen-reader;
+        }
+    }
+}
 
 .banner {
 
@@ -363,7 +386,7 @@ a.close-btn {
 }
 
 @include mq($from: phablet) {
-    .logo-banner {
+    .logo-banner, .banner {
         a.hgroup {
             @include mod_rem("background-position", 0 -92);
             @include mod_rem("width", 215);
@@ -390,4 +413,26 @@ a.close-btn {
             border: none;
         }
     }
+}
+
+@include mq($from: desktop) {
+    .logo-banner {
+        .leaderboard-ad {
+            display: block;
+            @include mod_rem("width", 468);
+            @include mod_rem("height", 60);
+            @include mod_rem("margin-top", 20);
+            float: right;
+            background-color: #ddd;
+            border: 1px dashed #bbb;
+
+            i {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                @include mod_rem("line-height", 55);
+            }
+        }
+    }
+
 }

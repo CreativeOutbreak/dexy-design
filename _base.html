@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 {% block head -%}
-{% include 'includes/_head.html' -%}
+{% include 'includes/head.html' -%}
 {% endblock %}
 <body>
     {% block menu -%}
-    {% include 'includes/_menu.html' -%}
+    {% include 'includes/menu.html' -%}
     {% endblock -%}
     {% block page -%}
     <section class="main container" role="main">
@@ -14,7 +14,7 @@
     </section>
     {% endblock %}
     {% block footer -%}
-    {% include 'includes/_footer.html' %}
+    {% include 'includes/footer.html' %}
     {%- endblock %}
 </body>
 </html>

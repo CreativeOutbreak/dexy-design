@@ -1,0 +1,15 @@
+.sidebar {
+    @include mod_rem("padding", 15 0);
+    .mpu-advert {
+        max-width: 100%;
+         
+        img {
+            max-width: 100%;
+            //@include mod_rem("width", 300);
+            //@include mod_rem("height", 250);
+            border: 1px dashed #bbb;
+            display: block;
+            margin: auto;
+        }
+    } 
+}

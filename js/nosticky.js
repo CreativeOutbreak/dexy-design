@@ -1,6 +1,9 @@
 var breakpoint = "740";
 
 var menu = document.querySelector('.sticky');
+var hgroup = document.querySelector('.hgroup').cloneNode(true);
+var container = menu.querySelector('.container');
+console.log(container);
 var menuDim = menu.getBoundingClientRect();
 var menuPosition = "110"; // set to static number, as it can cause bugs with responsive design.  you can usually use:  menu.getBoundingClientRect(); and then access menuPosition.top
 var placeholder = document.createElement('div');
@@ -13,6 +16,7 @@ window.addEventListener('scroll', function() {
         if (window.pageYOffset >= menuPosition && !isAdded) {
             menu.classList.add('fixed-top');
             menu.parentNode.insertBefore(placeholder, menu);
+            container.appendChild(hgroup);
             isAdded = true;
         } else if (window.pageYOffset < menuPosition && isAdded) {
             removeSticky();   
@@ -42,6 +46,7 @@ else {
 function removeSticky() {
     menu.classList.remove('fixed-top');
     menu.parentNode.removeChild(placeholder);
+    container.removeChild(hgroup);
     isAdded = false;
 }
 
