@@ -1,15 +1,18 @@
 window.addEvent('domready', function() {
   var menu_buttons = $$('.menu-button');
   var close_buttons = $$('.close-btn');
+  var menu_holders = $$('.holder');
   var sc = 'selected';
+  var tc = 'target';
   menu_buttons.addEvent('click', function(e) {
-    //history.go(-1);
+    e.stop();
     if(this.hasClass(sc)) {
-      e.stop();
       closeMenu();
     } else {
       menu_buttons.removeClass(sc);
       this.addClass(sc);
+      var ref = this.get('href');
+      $(ref).addClass(tc);
     }
   });
 
@@ -19,9 +22,9 @@ window.addEvent('domready', function() {
   });
 
   function closeMenu() {
-    //history.go(-1);
     menu_buttons.removeClass(sc);
-    window.location = "#nav-open-btn";
+    //window.location = "#nav-open-btn";
+    menu_holders.removeClass(tc);
   }
 
 });
