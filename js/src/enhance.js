@@ -9,10 +9,10 @@ window.addEvent('domready', function() {
     if(this.hasClass(sc)) {
       closeMenu();
     } else {
-      menu_buttons.removeClass(sc);
+      closeMenu();
       this.addClass(sc);
       var ref = this.get('href');
-      $(ref).addClass(tc);
+      $$(ref).addClass(tc);
     }
   });
 
@@ -23,9 +23,6 @@ window.addEvent('domready', function() {
 
   function closeMenu() {
     menu_buttons.removeClass(sc);
-    //window.location = "#nav-open-btn";
     menu_holders.removeClass(tc);
   }
-
 });
-
