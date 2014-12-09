@@ -1,9 +1,9 @@
 /** Main footer layout **/
-footer, .push {
+footer[role='contentinfo'], .push {
     height: (($footer-height * 2) + $header-height + 40px); /* .push must be the same height as .footer */
 }
 
-footer {
+footer[role='contentinfo'] {
     background-color: #333; 
     background-image: linear-gradient(to top, rgba(51,51,51,0) 0%,rgba(51,51,51,1) 100%), url(../img/patterns/6b.png);
     @include vendor('box-shadow', 0 1.5em 1em -1em rgba(0, 0, 0, 0.4) inset);
@@ -50,7 +50,7 @@ footer {
 
 
 @include mq($from: phablet) {
-    footer {
+    footer[role='contentinfo'] {
         .copy {
             @include mod_rem("padding-top", 10);
         }
@@ -58,11 +58,11 @@ footer {
 }
 
 @include mq($from: tablet) {
-    footer, .push {
+    footer[role='contentinfo'], .push {
         height: $footer-height + $header-height; /* .push must be the same height as .footer */
     }
 
-    footer {
+    footer[role='contentinfo'] {
         .inner {
             @include mod_rem("height", 205);
 

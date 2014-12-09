@@ -1,11 +1,11 @@
 {% extends '_base.html' -%}
 
 {% block page -%}
-<section class="main container" role="main">
+<main class="main container" role="main">
     {% block featured -%}
       {% include 'includes/featured.html' -%}
     {% endblock -%}
     {{ content }}
     <div class="push"></div>
-</section>
+</main>
 {% endblock -%}
