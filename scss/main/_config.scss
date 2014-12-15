@@ -22,3 +22,4 @@ $footer-height: 210px;
 $header-height: 45px;
 
 $mq-breakpoints: mq-add-breakpoint(phablet, 480px);
+$mq-breakpoints: mq-add-breakpoint(phablet-max, 640px);

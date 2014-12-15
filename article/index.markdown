@@ -3,7 +3,7 @@
 
 <article class="full-width">
 <figure>
-<img src="http://placehold.it/590x400/ddd/&text=Large+feature+image" alt="" />
+<img src="/img/keynote-590.jpg" alt="" />
 <figcaption>Not today: a girl walks past a school in Kibera, a Nairobi slum without running water or electricity, where 800 aid organizations operate. © Noor Khamis / Reuters</figcaption>
 </figure>
 
@@ -89,6 +89,11 @@ Indeed, many of the most radical popular movements today refuse any funding from
 
 So, to turn to the question posed at the beginning: do they help?
 
+<figure class="right">
+<img src="/img/brand-aware-320.jpg" alt="" />
+<figcaption>Brand aware: Turkana women in Kenya carrying the Merlin medical charity’s bags handed out at a health post. Merlin joined Save the Children in 2013. Frederic Courbet / Panos</figcaption>
+</figure>
+
 We could start with Bangladesh, which has the world’s largest national NGOs, effectively operating as a parallel government – they put more money into development activities than the government does. Most of their beneficiaries remain firmly below the poverty line. There is criticism, too, of the market model of development they have followed. This has been over-reliant on microcredit, which produces ‘rational profit-seeking individuals’ rather than community efforts – to say nothing
 of the debt traps many have found themselves in. 
 
@@ -116,13 +121,23 @@ Even the clumsy, lumbering BINGOs achieve much in material terms, but will they 
 reconnect with people’s struggles for justice?
 
 NGOs are expected to be non-political, but everything they do, operating within highly skewed systems of power, cannot but be political. They might as well get their hands truly dirty.
+<div class="share">
+<b>Share This Article</b>
+<a href="#"><i class="fa fa-facebook-square"></i></a>
+<a href="#"><i class="fa fa-twitter-square"></i></a>
+<a href="#"><i class="fa fa-google-plus-square"></i></a>
+</div>
+
+<br />
+<!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone"></div>
 
 <footer>
   <div class="vcard">Article by
     <address class="author">
      <em class="fn"><a title="Article by Dinyar Godrej" href="#">Dinyar Godrej</a></em>
     </address> in
-    <a href="#"><time datetime="2014-12-01" class="published updated">December 2014</time></a> issue
+    <a href="#"><time datetime="2014-12-01" class="published updated">December 2014</time></a> magazine
   </div>
 </footer>
 </article>
