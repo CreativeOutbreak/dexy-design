@@ -1,0 +1,61 @@
+.full-width {
+    
+    margin: 0 170px 45px;
+    position: relative;
+
+    blockquote.left, .pullquote.left {
+        float: left;
+        width: 400px;
+        margin-left: -173px;
+        color: $brand-primary;
+    }
+
+    blockquote.right, .pullquote.right {
+        width: 400px;
+        float: right;
+        color: $brand-primary;
+        margin-right: -170px;
+    }
+
+    .factbox {
+        width: 250px;
+        background-color: #eee;
+        padding: 1em;
+        margin: 1em 2em;
+        font-size: 0.85em;
+
+        &.left {
+            float: left;
+            margin-left: -125px;
+        }
+
+        &.right {
+            float: right;
+            margin-right: -125px;
+        }
+    }
+
+    /*.factbox.right {
+        width: 200px;
+        float: right;
+    }*/
+
+    figure {
+        img {
+            margin: auto;
+        }
+
+        figcaption {
+            width: 590px;
+
+        }
+    }
+
+    footer {
+        position: absolute;
+        top: 1em;
+        width: 200px;
+        margin-left: -175px;
+    }
+
+}

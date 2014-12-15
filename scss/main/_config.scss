@@ -2,6 +2,9 @@
  ** NI Variables
  **
  *************************************/
+// Use develoment mode
+$use-dev-mode: true;
+
 $brand-primary: #a03c3c;
 $bg-color: #fff; //#f4f3f2;
 $blog-color: #556e05;
@@ -9,7 +12,9 @@ $book-color: #d75a00;
 
 
 /*  Fonts  */
-$title-font: bold 15px/20px "Helvetica Neue",Arial,sans-serif;
+$title-font: bold 15px/20px "Raleway",Arial,sans-serif;
+$h1-color: #333;
+
 
 $max-width: 1300px;
 
