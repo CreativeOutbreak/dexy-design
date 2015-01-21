@@ -1,6 +1,16 @@
 {% import 'vars.jinja' as v %}
 
-
+<div class="sharethis_box">
+<div class="toggle_sharethis"></div>
+<div class="sharethis">
+   <span class='st_sharethis_large' displayText='ShareThis'></span>
+   <span class='st_facebook_large' displayText='Facebook'></span>
+   <span class='st_twitter_large' displayText='Tweet'></span>
+   <span class='st_googleplus_large' displayText='Google +'></span>
+   <span class='st_pinterest_large' displayText='Pinterest'></span>
+   <span class='st_email_large' displayText='Email'></span>
+</div>
+</div>
 <article class="full-width">
 <figure>
 <img src="/img/keynote-590.jpg" alt="" />
@@ -121,12 +131,6 @@ Even the clumsy, lumbering BINGOs achieve much in material terms, but will they 
 reconnect with people’s struggles for justice?
 
 NGOs are expected to be non-political, but everything they do, operating within highly skewed systems of power, cannot but be political. They might as well get their hands truly dirty.
-<div class="share">
-<b>Share This Article</b>
-<a href="#"><i class="fa fa-facebook-square"></i></a>
-<a href="#"><i class="fa fa-twitter-square"></i></a>
-<a href="#"><i class="fa fa-google-plus-square"></i></a>
-</div>
 
 <br />
 <!-- Place this tag where you want the +1 button to render. -->

@@ -1,0 +1,43 @@
+/**  Design for share this side icons **/
+
+
+.sharethis_box {
+
+    z-index: 987000;
+    @include vendor("transition", all 500ms ease);
+    position: fixed;
+    top: 85px;
+    right: -55px;
+
+    .sharethis {
+        width: 55px;
+        background-color: #ddd;
+        padding: 10px 5px 5px 10px;
+        @include vendor("box-shadow", 0 0 2px rgba(0, 0, 0, 0.2));
+    }
+
+    .toggle_sharethis {
+        background-color: #ccc;
+        height: 35%;
+        width: 20px;
+        position: absolute;
+        left: -20px;
+        top: 32%;
+    }
+
+    &.showthis {
+        @include vendor("transform", translate(-55px,0));
+        @include vendor("transform", translate3d(-55px,0,0));
+    }
+}
+
+
+@media screen and ( min-width: $usn-medium ) and ( min-height: 425px ) {
+    .sharethis_box {
+        top: 170px;
+    }
+}
+
+@media screen and ( min-width: $usn-medium ) and ( max-height: 425px ) {
+
+}

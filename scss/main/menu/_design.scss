@@ -13,6 +13,7 @@ body {
   width: 1px;
 }
 
+
 .logo-banner {
   position: fixed;
   top: 0;
@@ -318,20 +319,23 @@ body {
       position: absolute;
       
       //padding-top: 10px;
-      border: 1px solid #fff;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       width: 45px;
-      height: 45px;
+      height: 44px;
       display: inline-block;
-      
-      padding: 1px;
-
+      border-radius: 4px;
+      //padding: 1px;
+      &:hover {
+          @include vendor("box-shadow", 0 0 4px rgba(0, 0, 0, 0.3));
+      }
       a {
         color: #fff;
         background-color: transparent;
         display: block;
+        border-radius: 4px;
+        @include vendor("transition", background-color 400ms linear);
         &:hover {
-          //background-color: #fff;
-          @include vendor("transition", background-color 1000ms linear);
+            @include vendor("text-shadow", 1px 1px 1px rgba(0, 0, 0, 0.5));
         }
       }
 
@@ -340,7 +344,7 @@ body {
       }
 
       i {
-        line-height: 39px;
+        line-height: 41px;
         width: 45px;
         padding-top: 2px;
         cursor: pointer;
@@ -351,6 +355,12 @@ body {
     
     .fb {
       left: 10px;
+      a {
+
+        &:hover {
+          background-color: $fb-color;
+        }
+      }
     }
 
     .tw {
@@ -360,13 +370,19 @@ body {
       a {
 
         &:hover {
-          background-color: #55ACEE;
+          background-color: $tw-color;
         }
       }
     }
 
     .gp {
       right: 10px;
+      a {
+
+        &:hover {
+          background-color: $gp-color;
+        }
+      }
     }
 
   }
