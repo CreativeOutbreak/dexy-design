@@ -1,0 +1,212 @@
+.full-width {
+
+    position: relative;
+
+    blockquote, .pullquote {
+        width: 90%;
+        margin: 2em auto;
+        color: $brand-primary;
+
+        &.left, &.right {
+            display: block;
+        }
+    }
+
+    .factbox {
+        width: 90%;
+        background-color: #eee;
+        padding: 1em;
+        margin: 1em auto;
+        font-size: 0.85em;
+
+    }
+
+
+    figure {
+        margin: 1em 0;
+        text-align: center;
+        img {
+            max-width: 100%;
+            margin: auto;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+
+        figcaption {
+            width: 590px;
+            max-width: 100%;
+            font-size: 0.75em;
+            padding: 0;
+            color: #555;
+            margin: auto;
+        }
+
+        &.left, &.right {
+            width: 320px;
+            max-width: 100%;
+            margin: 2em auto;
+            img {
+                margin: auto;
+            }
+            figcaption {
+                width: 320px;
+                max-width: 100%;
+                margin: auto;
+                text-align: left;
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+@include mq($from: phablet) {
+    .full-width {
+        figure {
+            figcaption {
+                padding: 0 10px;
+            }
+        }
+    }
+}
+
+
+@include mq($from: phablet, $until: tablet) {
+    .full-width {
+
+        figure {
+
+            &.right, &.left {
+                max-width: 600px;
+                overflow: hidden;
+                width: 100%;
+
+                figcaption {
+                    width: auto;
+                }
+            }
+
+            &.left {
+                img {
+                    float: right;
+                    margin-left: 15px;
+                }
+            }
+
+            &.right {
+                img {
+                    float: left;
+                    margin-right: 15px;
+                }
+
+
+            }
+        }
+    }
+}
+
+@include mq($from: tablet) {
+    .full-width {
+
+        figure {
+
+            &.left, &.right {
+                width: 320px;
+                figcaption {
+                    width: 100%;
+                    margin: auto;
+                }
+            }
+
+            &.left {
+                float: left;
+                margin: 2em 2em 2em -25px;
+            }
+
+            &.right {
+                float: right;
+                margin: 2em -25px 2em 2em;
+            }
+        }
+
+        blockquote, .pullquote {
+            width: 300px;
+
+            &.left {
+                float: left;
+                margin-left: -25px;
+            }
+
+            &.right {
+                float: right;
+                margin-right: -25px;
+            }
+        }
+
+        .factbox {
+            width: 250px;
+            margin: 1em 2em;
+
+            &.left {
+                float: left;
+                margin-left: -25px;
+            }
+
+            &.right {
+                float: right;
+                margin-right: -25px;
+            }
+        }
+
+    }
+}
+
+@include mq($from: desktop) {
+    .full-width {
+        margin: 0 170px 45px;
+
+        figure {
+            &.left {
+                margin-left: -125px;
+            }
+
+            &.right {
+                margin-right: -125px;
+            }
+        }
+
+        blockquote, .pullquote {
+            width: 320px;
+
+            &.left {
+                float: left;
+                margin-left: -125px;
+            }
+
+            &.right {
+                float: right;
+                margin-right: -125px;
+            }
+        }
+
+        .factbox {
+            &.left {
+                margin-left: -125px;
+            }
+
+            &.right {
+                margin-right: -125px;
+            }
+        }
+
+        footer {
+            position: absolute;
+            top: 1em;
+            width: 173px;
+            margin-left: -175px;
+        }
+    }
+}

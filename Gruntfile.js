@@ -19,7 +19,8 @@ module.exports = function(grunt) {
             my_target: {
                 files: {
                     'js/enhance.min.js': 'js/src/enhance.js',
-                    'js/sticky-menu.min.js': 'js/src/sticky-menu.js'
+                    'js/sticky-menu.min.js': 'js/src/sticky-menu.js',
+                    'js/sharethis.min.js': 'js/src/sharethis.js'
                 }
             }
         },
