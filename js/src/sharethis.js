@@ -1,14 +1,13 @@
 /********************************
  *       Global Variables       *
  *******************************/
-var $st;
-var show_class = "showthis";
-var sharethis_class = ".sharethis_box";
+var show_class = "showthis",
+    sharethis_class = ".sharethis_box",
+    loaded = false,
+    $st = $(sharethis_class);
 
 $(document).ready(function() {
 
-    $st = $(sharethis_class);
-    
     $st.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(e){
         e.stopPropagation();
         console.log("transition ended");
@@ -18,48 +17,67 @@ $(document).ready(function() {
             console.log("Not Showing!!");
         }
     });
-
-    Unison.on('usn-x-small', function() {
-        console.log('usn-x-small');
-        hideShareThis();
-    });
-
-
-    Unison.on('usn-small', function() {
-        console.log('usn-small');
-        hideShareThis();
-    });
-
-
-    Unison.on('usn-small-medium', function() {
-        console.log('usn-small-medium');
-        hideShareThis();
-    });
-
-    Unison.on('usn-medium', function() {
-        console.log('usn-medium');
-        showShareThis();
-    });
-
-
-    Unison.on('usn-large-medium', function() {
-        console.log('usn-large-medium');
-        showShareThis();
-    });
-
-
-    Unison.on('usn-large', function() {
-        console.log('usn-large');
-        showShareThis();
-    });
-
-    Unison.on('usn-x-large', function() {
-        console.log('usn-x-large');
-        showShareThis();
-    });
-
+    
 
 });
+
+
+$( sharethis_class ).bind('DOMSubtreeModified', function(e) {
+    loaded = true;
+    $( this ).unbind( e );
+    console.log("Loaded ShareThis");
+    loadedShareThis();
+});
+
+
+Unison.on('change', function(bp) {
+    console.log("BreakPoint Changed to: " + bp.width);
+    var bpw = cleanPXString(bp.width);
+});
+
+
+Unison.on('usn-x-small', function() {
+    console.log('usn-x-small');
+    hideShareThis();
+});
+
+
+Unison.on('usn-small', function() {
+    console.log('usn-small');
+    hideShareThis();
+});
+
+
+Unison.on('usn-small-medium', function() {
+    console.log('usn-small-medium');
+    hideShareThis();
+});
+
+Unison.on('usn-medium', function() {
+    console.log('usn-medium');
+    showShareThis();
+});
+
+
+Unison.on('usn-large-medium', function() {
+    console.log('usn-large-medium');
+    showShareThis();
+});
+
+
+Unison.on('usn-large', function() {
+    console.log('usn-large');
+    showShareThis();
+});
+
+Unison.on('usn-x-large', function() {
+    console.log('usn-x-large');
+    showShareThis();
+});
+
+/**
+ * Functions
+ */
 
 var hideShareThis = function() {
     console.log("hideFunction");
@@ -67,5 +85,14 @@ var hideShareThis = function() {
 }
 
 var showShareThis = function() {
-    $st.addClass(show_class);
+    if(loaded) $st.addClass(show_class);
+}
+
+var loadedShareThis = function() {
+    var bp = Unison.fetch.now();
+    console.log(cleanPXString(bp.width));
+}
+
+var cleanPXString = function(str) {
+    return Number(str.replace("px", ""));
 }

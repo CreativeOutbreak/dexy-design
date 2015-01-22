@@ -1,16 +1,20 @@
 /**  Design for share this side icons **/
 
 
+.transition {
+    @include vendor("transition", all 500ms ease);
+}
+
 .sharethis_box {
 
     z-index: 987000;
-    @include vendor("transition", all 500ms ease);
     position: fixed;
     top: 85px;
     right: -55px;
 
     .sharethis {
         width: 55px;
+        height: 246px;
         background-color: #ddd;
         padding: 10px 5px 5px 10px;
         @include vendor("box-shadow", 0 0 2px rgba(0, 0, 0, 0.2));

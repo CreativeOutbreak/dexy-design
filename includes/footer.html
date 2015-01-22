@@ -26,7 +26,7 @@
             © Copyright New Internationalist 1973-2014. Except where otherwise noted, content on this site is <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" title="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License">licensed</a> under Creative Commons. Except where otherwise noted, images on this site are © the attributed photographer/illustrator or representative agency.
         </small>
 </footer>
-<script src="/js/jquery-2.1.3.min.js"><script>
+<script src="/js/jquery-2.1.3.min.js"></script>
 <script src="/js/src/enhance.js"></script>
 <script src="/js/sticky-menu.min.js"></script>
 <script src="/js/src/sharethis.js"></script>
@@ -38,5 +38,12 @@
 <script>
 var options={ "publisher": "80e3c1af-7db1-434d-98b4-3c777a693d9d", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "googleplus", "pinterest", "email", "sharethis"]}};
 var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+
+function stcb(e,s) {
+    console.log(e);
+    console.log(s);
+}
+stLight.subscribe("load",stcb);
+
 </script>
 
