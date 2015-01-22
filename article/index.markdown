@@ -1,7 +1,7 @@
 {% import 'vars.jinja' as v %}
 
 <div class="sharethis_box">
-<div class="toggle_sharethis"></div>
+<div class="toggle_sharethis"><i class="fa fa-angle-double-left"></i></div>
 <div class="sharethis">
    <span class='st_sharethis_large' displayText='ShareThis'></span>
    <span class='st_facebook_large' displayText='Facebook'></span>
