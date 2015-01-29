@@ -13,17 +13,18 @@
     <div class="banner sticky">
         <div class="container">
 
-            <a class="menu-button" id="nav-open-btn"  href="#nav-holder"><span class="screen-reader">Menu</span> <i class="fa fa-bars"></i></a> 
-            <a class="menu-button" id="login-open-btn"  href="#login-holder"><span>Login</span> <i class="fa fa-user"></i></a> 
-            <a class="menu-button" id="search-open-btn"  href="#search-holder"><span>Search</span> <i class="fa fa-search"></i></a>
+            <label class="menu-button" for="menu-radio"><span class="screen-reader">Menu</span> <i class="fa fa-bars"></i></label> 
+            <label class="menu-button" for="login-radio"><span>Login</span> <i class="fa fa-user"></i></label> 
+            <label class="menu-button" for="search-radio"><span>Search</span> <i class="fa fa-search"></i></label>
             <a class="subs-button" href="#">Subscribe</a>
         </div>
     </div>
 </header>
 
-
+<input class="menu-radios" id="menu-radio" type="radio" name="menus" value="main" />
 <div id="nav-holder" class="holder menu">
-    <a id="nav-close-btn" class="close-btn" href="#nav-open-btn"><span class="screen-reader">Close Menu</span> <i class="fa fa-times-circle-o "></i></a> 
+    <input class="hide" id="close-main" type="radio" name="menus" value="close" />
+    <label id="nav-close-btn" class="close-btn" for="close-main"><span class="screen-reader">Close Menu</span> <i class="fa fa-times-circle-o "></i></label> 
     <div class="menu-wrap">
         <h2>Menu</h2>
         <nav class="global-nav" id="main-nav" role="navigation"> 
@@ -76,9 +77,10 @@
     </section>
 </div>
 
-
+<input class="menu-radios" id="login-radio" type="radio" name="menus" value="login" />
 <div id="login-holder" class="holder">
-    <a id="login-close-btn" class="close-btn" href="#login-open-btn"><span class="screen-reader">Close Menu</span> <i class="fa fa-times-circle-o "></i></a> 
+    <input class="hide" id="close-login" type="radio" name="menus" value="close" />
+    <label id="nav-close-btn" class="close-btn" for="close-login"><span class="screen-reader">Close Menu</span> <i class="fa fa-times-circle-o "></i></label> 
     <h2>Login</h2>
     <form id="login-form">
         <input type="text" name="email" placeholder="Email Address" />
@@ -91,8 +93,10 @@
     <a class="gp btn" href="#"><i class="fa fa-google-plus"></i> <span>Google+</span></a>
 </div>
 
+<input class="menu-radios" id="search-radio" type="radio" name="menus" value="search" />
 <div id="search-holder" class="holder">
-    <a id="login-close-btn" class="close-btn" href="#login-open-btn"><span class="screen-reader">Close Menu</span> <i class="fa fa-times-circle-o "></i></a>
+    <input class="hide" id="close-search" type="radio" name="menus" value="close" />
+    <label id="nav-close-btn" class="close-btn" for="close-search"><span class="screen-reader">Close Menu</span> <i class="fa fa-times-circle-o "></i></label>
     <h2>Search</h2>
     <div id="search-box">
         <input type="search" name="search" placeholder="Type and press enter" /> <i class="fa fa-search"></i>

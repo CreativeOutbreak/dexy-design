@@ -13,6 +13,9 @@ body {
   width: 1px;
 }
 
+.menu-radios {
+    @extend .hide;
+}
 
 .logo-banner {
   position: fixed;
@@ -401,7 +404,7 @@ body {
   }
 }
 
-a.close-btn {
+.close-btn {
   color: #ffffff;
   float: right;
   @include mod_rem("font-size", 24);
